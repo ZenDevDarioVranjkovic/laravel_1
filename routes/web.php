@@ -86,3 +86,7 @@ Route::group(['prefix' => 'admin'], function() {
             ->with('info', 'Post edited, new Title:' . $request->input('title'));
     })->name('admin.update');
 });
+
+Route::get('/events', function () {
+    return view('ticketoffice.index');
+})->name('ticketoffice.index');
