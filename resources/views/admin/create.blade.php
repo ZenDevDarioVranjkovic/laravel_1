@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    
+
     @if(count($errors->all()))
         <div class="row">
             <div class="col-md-12">
