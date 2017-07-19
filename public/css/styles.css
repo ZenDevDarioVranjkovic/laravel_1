@@ -21,11 +21,11 @@
 
 /* Search */
 #header form {
-    float: left;
-    margin-left: 20px;
+	float: left;
+	margin-left: 20px;
 }
 #header form span {
-    position: relative;
+	position: relative;
     margin-right: -35px;
     display: inline-block;
 }
@@ -40,40 +40,40 @@
 
 /* Content */
 #content .row-1 {
-    color: #fff;
-    padding: 50px 0;
+	color: #fff;
+	padding: 50px 0;
     background: #063b63;
     background: radial-gradient(ellipse at center,#1c65a0 2%,#074675 70%);
-    background: -moz-radial-gradient(center, ellipse cover, #1c65a0 2%, #074675 70%);
-    background: -webkit-radial-gradient(center, ellipse cover, #1c65a0 2%,#074675 70%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c65a0', endColorstr='#074675',GradientType=1 );
+	background: -moz-radial-gradient(center, ellipse cover, #1c65a0 2%, #074675 70%);
+	background: -webkit-radial-gradient(center, ellipse cover, #1c65a0 2%,#074675 70%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c65a0', endColorstr='#074675',GradientType=1 );
 }
 #content .row-1 h2 {
-    color: #fff;
-    margin-bottom: 0;
+	color: #fff;
+	margin-bottom: 0;
 }
 
 #content .row-2 {
-    padding: 40px 0 60px;
+	padding: 40px 0 60px;
 }
 
 
 
 /* Results */
 #search .row-1 {
-    padding: 50px 0 70px;
+	padding: 50px 0 70px;
 }
 #search #results {
-    float: left;
-    width: 770px;
+	float: left;
+	width: 770px;
 }
 #search #results .fa {
-    color: #2093ac;
-    font-size: 20px;
-    margin-right: 10px;
+	color: #2093ac;
+	font-size: 20px;
+	margin-right: 10px;
 }
 #search #results header #number {
-    color: #fff;
+	color: #fff;
     float: left;
     font-weight: bold;
     margin-top: -68px;
@@ -102,7 +102,7 @@
     border: 1px solid #d5d5d5;
 }
 #search #results header #showfilter.show {
-    margin: -12px 0;
+	margin: -12px 0;
     padding: 10px 20px 40px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -125,11 +125,11 @@
     width: 200px;
 }
 #search #results #filters .filter h5 {
-    font-weight: bold;
+	font-weight: bold;
 }
 #search #results #filters .filter ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 #search #results #filters .filter ul li {
     list-style: none;
@@ -139,54 +139,54 @@
     color: #2093ac;
 }
 #search #results #filters #hidefilter {
-    clear: both;
-    float: right;
-    color: #2093ac;
-    cursor: pointer;
-    font-weight: bold;
+	clear: both;
+	float: right;
+	color: #2093ac;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 
 #search #results #items {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 #search #results #items ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 #search #results #items ul li {
-    float: left;
-    clear: both;
-    padding: 25px 0;
-    list-style: none;
+	float: left;
+	clear: both;
+	padding: 25px 0;
+	list-style: none;
 }
 #search #results #items ul li:nth-child(2n) {
-    background: #f5f7f8;
+	background: #f5f7f8;
 }
 #search #results #items ul li p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 #search #results #items ul li h4 {
-    color: #2093ac;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+	color: #2093ac;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 #search #results #items ul li .date {
-    float: left;
-    padding: 0 30px;
-    text-align: center;
-    margin-right: 30px;
-    text-transform: uppercase;
-    border-right: 1px solid #e9e9e9;
+	float: left;
+	padding: 0 30px;
+	text-align: center;
+	margin-right: 30px;
+	text-transform: uppercase;
+	border-right: 1px solid #e9e9e9;
 }
 #search #results #items ul li .date strong {
-    color: #2093ac;
-    display: block;
+	color: #2093ac;
+	display: block;
 }
 #search #results #items ul li .tickets {
-    float: left;
-    width: 605px;
+	float: left;
+	width: 605px;
 }
 #search #results #items ul li .tickets .button {
     float: right;
@@ -201,23 +201,23 @@
 
 
 #search #results #page #pagination {
-    float: left;
+	float: left;
 }
 #search #results #page #pagination a {
-    padding: 5px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    border: 1px solid #d5d5d5;
+	padding: 5px 10px;
+	border-radius: 4px;
+	display: inline-block;
+	border: 1px solid #d5d5d5;
 }
 #search #results #page #pagination a.current {
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    background: #3db0c9;
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	background: #3db0c9;
 }
 
 #search #results #page #show {
-    float: right;
+	float: right;
 }
 #search #results #page #show select {
     width: 40px;
@@ -229,22 +229,22 @@
 
 /* Sidebar */
 #sidebar {
-    width: 300px;
-    float: right;
+	width: 300px;
+	float: right;
 }
 #sidebar h3 {
-    font-weight: 400;
+	font-weight: 400;
 }
 #sidebar aside {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d5d5d5;
 }
 #sidebar aside .meta p {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 #sidebar aside:last-child {
-    border: 0;
+	border: 0;
 }
 
 
@@ -252,27 +252,27 @@
 
 /* Ticket Page */
 #ticket #header {
-    padding: 10px 30px;
+	padding: 10px 30px;
 }
 
 
 /* Ticket Row 1 */
 #ticket #content .row-1 {
-    padding: 20px 30px;
-    background: #063b63;
+	padding: 20px 30px;
+	background: #063b63;
 }
 #ticket #content .row-1 h3 {
-    color: #fff;
-    margin-bottom: 10px;
+	color: #fff;
+	margin-bottom: 10px;
 }
 #ticket #content .row-1 small {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 
 #ticket .row-2 {
-    padding: 0;
-    background: #fbfbfb;
+	padding: 0;
+	background: #fbfbfb;
 }
 #ticket .row-2 form {
     width: 500px;
@@ -280,31 +280,31 @@
     border-right: 1px solid #ebedef;
 }
 #ticket .row-2 form fieldset {
-    margin: 0;
-    border: 0;
-    padding: 0;
+	margin: 0;
+	border: 0;
+	padding: 0;
 }
 
 #ticket .row-2 form #filter {
-    padding: 20px 20px 0;
+	padding: 20px 20px 0;
     background: #f5f7f8;
     border-bottom: 1px solid #ebedef;
 }
 #ticket .row-2 form #filter h5 {
-    font-weight: bold;
-    margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 #ticket .row-2 form #filter .fields {
-    clear: both;
-    margin-bottom: 15px;
+	clear: both;
+	margin-bottom: 15px;
 }
 #ticket .row-2 form #filter .fields .field {
-    float: left;
-    margin-right: 20px;
+	float: left;
+	margin-right: 20px;
 }
 #ticket .row-2 form #filter .fields .field label {
-    font-weight: 400;
-    margin-right: 10px;
+	font-weight: 400;
+	margin-right: 10px;
 }
 #ticket .row-2 form #filter .fields .field input[type="text"] {
     width: 50px;
@@ -332,41 +332,41 @@
 
 /* Tickets */
 #ticket .row-2 form #tickets {
-    max-height: 400px;
-    overflow-y: scroll;
+	max-height: 400px;
+	overflow-y: scroll;
 }
 #ticket .row-2 form #tickets ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 #ticket .row-2 form #tickets ul li {
-    clear: both;
-    padding: 20px;
-    border-bottom: 1px solid #ebedef;
+	clear: both;
+	padding: 20px;
+	border-bottom: 1px solid #ebedef;
 }
 #ticket .row-2 form #tickets ul li p {
-    margin: 0;
-    font-size: 12px;
-    line-height: 14px;
+	margin: 0;
+	font-size: 12px;
+	line-height: 14px;
 }
 #ticket .row-2 form #tickets ul li h6 {
-    font-weight: bold;
-    margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 #ticket .row-2 form #tickets ul li:hover {
-    background: #f5f7f8;
+	background: #f5f7f8;
 }
 #ticket .row-2 form #tickets ul li:last-child {
-    border: 0;
+	border: 0;
 }
 
 
 #ticket .row-2 form #tickets ul li .meta {
-    float: left;
+	float: left;
 }
 #ticket .row-2 form #tickets ul li .fields {
-    float: right;
+	float: right;
 }
 #ticket .row-2 form #tickets ul li .fields button {
     border: 0;
@@ -379,8 +379,8 @@
     background: #da4545;
 }
 #ticket .row-2 form #tickets ul li .fields .field {
-    float: left;
-    margin-left: 20px;
+	float: left;
+	margin-left: 20px;
 }
 #ticket .row-2 form #tickets ul li .fields .field select {
     width: 40px;
@@ -395,7 +395,7 @@
 
 /* Footer */
 #footer {
-    background: #f5f7f8;
+	background: #f5f7f8;
     padding: 50px 0 10px;
     border-top: 1px solid #ebedef;
 }
@@ -403,26 +403,26 @@
     font-weight: 400;
 }
 #footer .row-1 {
-    padding: 0 30px;
+	padding: 0 30px;
 }
 #footer .row-1 .block {
-    float: left;
-    width: 290px;
+	float: left;
+	width: 290px;
 }
 #footer .row-1 .block ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 #footer .row-1 .block ul li {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 #footer .row-1 .block#securty {
-    width: auto;
-    float: right;
+	width: auto;
+	float: right;
 }
 #footer .row-1 .block#securty .copy {
-    float: right;
+	float: right;
 }
 #footer .row-1 .block#securty figure {
     margin: 0 0 80px;

@@ -1,0 +1,105 @@
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+
+
+
+body {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Helvetica,Arial,sans-serif;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+a:hover {
+    color: #2093ac;
+}
+p {
+    margin: 0 0 15px;
+    line-height: 25px;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    margin: 0 0 20px;
+    font-weight: 300;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header ul li {
+    float: left;
+    margin-left: 20px;
+}
+footer {
+    font-size: 14px;
+}
+
+/* Placeholder */
+input:-moz-placeholder {
+    color: #aaa;
+    font-weight: normal;
+}
+/* firefox 19+ */
+input::-moz-placeholder {
+    color: #aaa;
+    font-weight: normal;
+}
+/* ie */
+input:-ms-input-placeholder {
+    color: #aaa;
+    font-weight: normal;
+}
+input::-webkit-input-placeholder {
+    color: #aaa;
+    font-weight: normal;
+}
+
+
+.red {
+    color: red;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.clear::after {
+    height: 0;
+    content: '.';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+.inner {
+    width: 1100px;
+    margin: 0 auto;
+}
