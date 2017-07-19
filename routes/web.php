@@ -40,12 +40,14 @@ Route::group(['prefix' => 'admin'], function() {
         return view('admin.index');
     })->name('admin.index');
 
-    Route::get('create', function (\Illuminate\Http\Request $request) {
+    Route::get('create', function () {
         return view('admin.create');
     })->name('admin.create');
 
-    Route::post('create', function() {
-        return "It works!";
+    Route::post('create', function(\Illuminate\Http\Request $request) {
+        return redirect()
+            -> route('admin.index')
+            ->with('info', 'Post created, Title:' . $request->input('title'));
     })->name('admin.create');
 
     Route::get('edit/{id}', function ($id) {
@@ -65,6 +67,8 @@ Route::group(['prefix' => 'admin'], function() {
     })->name('admin.edit');
 
     Route::post('edit', function(\Illuminate\Http\Request $request) {
-        return "It works!";
+        return redirect()
+            -> route('admin.index')
+            ->with('info', 'Post edited, new Title:' . $request->input('title'));
     })->name('admin.update');
 });
