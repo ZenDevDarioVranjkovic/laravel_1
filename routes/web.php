@@ -90,3 +90,7 @@ Route::group(['prefix' => 'admin'], function() {
 Route::get('/events', function () {
     return view('ticketoffice.index');
 })->name('ticketoffice.index');
+
+Route::get('/tickets', function () {
+    return view('ticketoffice.tickets');
+})->name('ticketoffice.tickets');
