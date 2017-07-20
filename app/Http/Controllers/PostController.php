@@ -4,21 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Illuminate\Session\Store;
+
 
 class PostController extends Controller
 {
     public function getIndex()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('title', 'desc')->get();
         return view('blog.index', ['posts' => $posts]);
     }
 
     public function getAdminIndex()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('title', 'asc')->get();
         return view('admin.index', ['posts' => $posts]);
     }
 
@@ -39,6 +38,13 @@ class PostController extends Controller
         return view('admin.edit', ['post' => $post, 'postId' => $id]);
     }
 
+    public function getAdminDelete($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('admin.index')->with('info', 'Post delete');
+    }
+
     public function postAdminCreate(Request $request)
     {
         $this->validate($request, [
@@ -53,14 +59,16 @@ class PostController extends Controller
         return redirect()->route('admin.index')->with('info', 'Post created, Title is: ' . $request->input('title'));
     }
 
-    public function postAdminUpdate(Store $session, Request $request)
+    public function postAdminUpdate(Request $request)
     {
         $this->validate($request, [
             'title' => 'required|min:5',
             'content' => 'required|min:10'
         ]);
-        $post = new Post();
-        $post->editPost($session, $request->input('id'), $request->input('title'), $request->input('content'));
+        $post = Post::find($request-> input('id'));
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->save();
         return redirect()->route('admin.index')->with('info', 'Post edited, new Title is: ' . $request->input('title'));
     }
 }

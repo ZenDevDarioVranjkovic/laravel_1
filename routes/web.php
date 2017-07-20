@@ -50,6 +50,12 @@ Route::group(['prefix' => 'admin'], function() {
         'uses' => 'PostController@postAdminUpdate',
         'as' => 'admin.update'
     ]);
+
+    Route::get('delete/{id}', [
+        'uses' => 'PostController@getAdminDelete',
+        'as' => 'admin.delete'
+    ]);
+
 });
 
 Route::get('tickets', function () {
@@ -61,5 +67,5 @@ Route::get('tickets', function () {
 })->name('ticketoffice.tickets');
 
 Route::get('events', function () {
-    return view('ticketoffice.index');
+    return view('ticketoffice.tickets');
 })->name('ticketoffice.index');
