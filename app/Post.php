@@ -18,6 +18,22 @@ class Post
                 'content' => 'This blog post will get right on rrack with Laravel'
             ],
             [
+                'title' => 'Learning Laravel',
+                'content' => 'This blog post will get right on rrack with Laravel'
+            ],
+            [
+                'title' => 'Learning Laravel',
+                'content' => 'This blog post will get right on rrack with Laravel'
+            ],
+            [
+                'title' => 'Learning Laravel',
+                'content' => 'This blog post will get right on track with Laravel 5'
+            ],
+            [
+                'title' => 'Learning Laravel',
+                'content' => 'This blog post will get right on rrack with Laravel'
+            ],
+            [
                 'title' => 'Something else',
                 'content' => 'Some other content'
             ]
