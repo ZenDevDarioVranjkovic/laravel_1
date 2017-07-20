@@ -26,7 +26,7 @@
                             class="form-control"
                             id="title"
                             name="title"
-                            value="{{ $post['title'] }}"
+                            value="{{ $post->title }}"
                     >
                 </div>
                 <div class="form-group">
@@ -36,7 +36,7 @@
                             class="form-control"
                             id="content"
                             name="content"
-                            value="{{ $post{'content'} }}"
+                            value="{{ $post->content }}"
                     >
                 </div>
                 {{ csrf_field() }}

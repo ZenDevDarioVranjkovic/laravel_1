@@ -1,5 +1,18 @@
 @import url('global.css');
 
+/*Test*/
+
+.quote {
+    font: 400 72px "Arizonia", Helvetica, sans-serif;
+    color: #F4645F;
+    text-align: center;
+}
+
+.post-title {
+    color: #F4645F;
+}
+
+/*End Test*/
 
 /* Header */
 #header {
