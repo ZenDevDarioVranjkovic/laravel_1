@@ -1,1 +1,1 @@
-<p> {{ $ticketapis }} </p>
+{{ $ticketapi }}

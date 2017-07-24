@@ -11,10 +11,10 @@ class TicketApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getIndex(Storage $session)
+    public function getIndex()
     {
-        $ticketapi = new Ticketapi();
-        $ticketapis = $ticketapi->getTickets($session);
-        return view('ticketapi.index',['ticketapis' => $ticketapis]);
+        $api = new Ticketapi();
+        $ticketapi = $api->getEvents(array ('beginDate' => '04.24.2017'));
+        return view('ticketapi.index',['ticketapi' => $ticketapi]);
     }
 }
