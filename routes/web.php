@@ -74,3 +74,6 @@ Route::get('tickets', function () {
 Route::get('events', function () {
     return view('ticketoffice.tickets');
 })->name('ticketoffice.index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
