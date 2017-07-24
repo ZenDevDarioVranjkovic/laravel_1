@@ -63,16 +63,19 @@ Route::group(['prefix' => 'admin'], function() {
 
 });
 
-Route::get('tickets', function () {
-    return view('ticketoffice.tickets');
-})->name('ticketoffice.tickets');
+Route::get('ticketapi', [
+    'uses' => 'TicketApiController@getIndex',
+    'as' => 'ticketapi.index'
+]);
 
 Route::get('tickets', function () {
     return view('ticketoffice.tickets');
 })->name('ticketoffice.tickets');
+
 
 Route::get('events', function () {
-    return view('ticketoffice.tickets');
+    return view('ticketoffice.index');
 })->name('ticketoffice.index');
+
 Auth::routes();
 
