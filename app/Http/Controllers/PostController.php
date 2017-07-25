@@ -8,7 +8,7 @@ use App\Tag;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-
+use Gate;
 class PostController extends Controller
 {
     public function getIndex()
@@ -66,6 +66,9 @@ class PostController extends Controller
         }
 
         $post = Post::find($id);
+        if(Gate:: denies('manipulate-post', $post)){
+            return redirect()->back();
+        }
         $post->likes()->delete();
         $post->tags()->detach();
         $post->delete();
@@ -106,6 +109,9 @@ class PostController extends Controller
             'content' => 'required|min:10'
         ]);
         $post = Post::find($request-> input('id'));
+        if(Gate:: denies('manipulate-post', $post)){
+            return redirect()->back();
+        }
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->save();
