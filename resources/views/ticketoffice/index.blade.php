@@ -11,9 +11,6 @@
         </section>
         <section class="row-2">
             <div class="inner clear">
-
-                <div id="test123"></div>
-
                 <div id="results">
 
                     <header class="clear">
@@ -24,6 +21,15 @@
                         <div id="showfilter" onclick="showfilter(this)"><strong><i class="fa fa-sliders"></i> Filters</strong></div>
 
                     </header>
+
+                    <table id="my-ajax-table">
+                        <thead>
+                        <th>ChildCategoryID</th>
+                        <th>Some Other Attribute</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
 
                     <div id="filters" class="clear">
 
