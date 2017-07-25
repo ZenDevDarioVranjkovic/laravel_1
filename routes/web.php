@@ -64,7 +64,7 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::get('ticketapi', [
-    'uses' => 'TicketApiController@getIndex',
+    'uses' => 'TicketApiController@getApi',
     'as' => 'ticketapi.index'
 ]);
 

@@ -1,1 +1,1 @@
-{{ $ticketapi }}
+{{ $result }}
