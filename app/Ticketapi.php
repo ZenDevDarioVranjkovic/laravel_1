@@ -117,7 +117,13 @@ class Ticketapi
         $result = $result->GetEventsResult->Event;
         //$json = json_encode( (array)$result );
 
+        //echo '{';
+        //echo ' "records": ';
         echo json_encode($result);
+        //echo ' , ';
+        //echo '  "queryRecordCount": 304,';
+        //echo '  "totalRecordCount": 304';
+       // echo '}';
     }
 
     function getEvents($param) {

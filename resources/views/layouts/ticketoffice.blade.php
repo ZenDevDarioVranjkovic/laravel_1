@@ -32,10 +32,42 @@
             document.getElementById('filters').style.display = 'none';
         }
 
-        $(document).ready(function() {
-            $.getJSON('/ticketapi', function(data) {
-                console.log(data);
-            });
+        $( document ).ready(function() {
+
+
+
+
+        });
+
+        // Function that renders the list items from our records
+        function ulWriter(rowIndex, record, columns, cellWriter) {
+            var cssClass = "col-xs-4", li;
+            if (rowIndex % 3 === 0) { cssClass += ' first'; }
+            li = '<li class="' + cssClass + '"><div class="thumbnail"><div class="thumbnail-image">' + record.City + '</div><div class="caption">' + record.MapURL + '</div></div></li>';
+            return li;
+        }
+
+
+        $.getJSON('/ticketapi', function(data) {
+            console.log(data[0].City);
+            var dinos = data;
+
+        $('#ul-example').dynatable({
+            table: {
+                bodyRowSelector: 'li'
+            },
+            dataset: {
+                perPageDefault: 10,
+                perPageOptions: [10, 20, 30],
+                records: dinos
+            },
+            writers: {
+                _rowWriter: ulWriter
+            },
+            params: {
+                records: 'dinosaurs'
+            }
+        });
 
         });
 

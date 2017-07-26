@@ -22,24 +22,17 @@
 
                     </header>
 
+                    <div class="dynatable-demo container-fluid">
+                        <ul id="ul-example" class="row">
+                        </ul>
+                    </div>
 
 
-                    <table id="my-final-table">
-                        <thead>
-                        <th>Band</th>
-                        <th>Song</th>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                    <table id="my-ajax-table">
-                        <thead>
-                        <th>ChildCategoryID</th>
-                        <th>Some Other Attribute</th>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <p><cite>
+                            <i>
+                                * List of U.S. state dinosaurs from <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_U.S._state_dinosaurs">Wikipedia</a>
+                            </i>
+                        </cite></p>
 
                     <div id="filters" class="clear">
 
