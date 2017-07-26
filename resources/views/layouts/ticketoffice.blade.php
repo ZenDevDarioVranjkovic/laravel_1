@@ -11,6 +11,7 @@
 
     <!-- Links -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.dynatable.css">
 
     <!-- Script -->
     <script type="text/javascript">
@@ -36,7 +37,7 @@
 
     <script>
 
-        /*
+
 
         $.getJSON('/ticketapi', function(data) {
             var json = JSON.parse(data);
@@ -44,9 +45,9 @@
             console.log(obj);
         });
 
-*/
+
         $.getJSON('/ticketapi', function (response) {
-            var json = JSON.parse(response);
+            var json =  JSON.parse(response);
             $('#my-ajax-table').dynatable({
                 dataset: {
                     records: json
