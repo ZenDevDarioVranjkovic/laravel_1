@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.dynatable.css">
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatable.js"></script>
+
     <!-- Script -->
     <script type="text/javascript">
 
@@ -29,47 +32,21 @@
             document.getElementById('filters').style.display = 'none';
         }
 
-
-    </script>
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.dynatable.js"></script>
-
-    <script>
-
-
-
-        $.getJSON('/ticketapi', function(data) {
-            var json = JSON.parse(data);
-             obj = json;
-            console.log(obj);
-        });
-
-
-        $.getJSON('/ticketapi', function (response) {
-            var json =  JSON.parse(response);
-            $('#my-ajax-table').dynatable({
-                dataset: {
-                    records: json
-                },
+        $(document).ready(function() {
+            $.getJSON('/ticketapi', function(data) {
+                console.log(data);
             });
+
         });
 
-/*
-        $('#my-ajax-table').dynatable({
-
-            dataset: {
-                ajax: true,
-                ajaxUrl: '/ticketapi',
-                ajaxOnLoad: true,
-                records: []
-            }
-        });
-*/
     </script>
+
+
+
 
 </head>
 <body id="search" class="v1">
+
 @include('partials.ticketoffice-header')
 
     @yield('content')

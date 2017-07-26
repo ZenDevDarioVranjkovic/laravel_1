@@ -22,6 +22,16 @@
 
                     </header>
 
+
+
+                    <table id="my-final-table">
+                        <thead>
+                        <th>Band</th>
+                        <th>Song</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                     <table id="my-ajax-table">
                         <thead>
                         <th>ChildCategoryID</th>

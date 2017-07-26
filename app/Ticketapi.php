@@ -113,9 +113,11 @@ class Ticketapi
         $param['websiteConfigID'] = WEB_CONF_ID;
         $client = new SoapClient(WSDL);
         $result = $client->__soapCall('GetEvents', array('parameters' => $param));
+
         $result = $result->GetEventsResult->Event;
-        $json = json_encode( (array)$result );
-        echo json_encode($json);
+        //$json = json_encode( (array)$result );
+
+        echo json_encode($result);
     }
 
     function getEvents($param) {
