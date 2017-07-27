@@ -38,14 +38,17 @@
                 console.log(data);
             });
 
+            //Function get day
+
+
         // Function that renders the list items from our records
 
         function ulWriter(rowIndex, record, columns, cellWriter) {
             var cssClass = "col-xs-4", li;
             if (rowIndex % 3 === 0) { cssClass += ' first'; }
             li = '<li class="">' +
-                ' <div class="date"><span>' + record.Date + '</span><strong>' +  record.Date + '</strong><small>' +  record.Date + '</small></div>' +
-                ' <div class="tickets"><h4>' + record.Date + '</h4><p>' +  record.Date + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
+                ' <div class="date"><span>' + record.DisplayDate + '</span><strong>' +  record.DisplayDate + '</strong><small>' +  record.DisplayDate + '</small></div>' +
+                ' <div class="tickets"><h4>' + record.City + '</h4><p>' +  record.Venue + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
                 '</li>';
             return li;
         }

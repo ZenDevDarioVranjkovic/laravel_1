@@ -14,7 +14,7 @@ class TicketApiController extends Controller
     public function getApi()
     {
         $ticketapi = new Ticketapi();
-        $result = $ticketapi->getEvents2(array ('beginDate' => '07.25.2017'));
+        $result = $ticketapi->getEvents2(array ('beginDate' => '07.27.2017'));
         return view('ticketapi.index',['result' => $result]);
     }
 }
