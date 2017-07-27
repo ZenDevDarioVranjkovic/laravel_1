@@ -22,18 +22,6 @@
 
                     </header>
 
-                    <div class="dynatable-demo container-fluid">
-                        <ul id="ul-example" class="row">
-                        </ul>
-                    </div>
-
-
-                    <p><cite>
-                            <i>
-                                * List of U.S. state dinosaurs from <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_U.S._state_dinosaurs">Wikipedia</a>
-                            </i>
-                        </cite></p>
-
                     <div id="filters" class="clear">
 
                         <div class="filter dates">
@@ -71,6 +59,14 @@
                         <span id="hidefilter" onclick="hidefilter(this)">Hide Filters</span>
                     </div>
 
+
+                    <div id="items" class="clear">
+
+                        <div class="dynatable-demo container-fluid">
+                            <ul id="ul-dynatable-events" class="row clear">
+                            </ul>
+                        </div>
+                    </div>
 
                     <div id="items" class="clear">
 

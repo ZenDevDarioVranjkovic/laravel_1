@@ -34,41 +34,50 @@
 
         $( document ).ready(function() {
 
-
-
-
-        });
+            $.getJSON('/ticketapi', function(data) {
+                console.log(data);
+            });
 
         // Function that renders the list items from our records
+
         function ulWriter(rowIndex, record, columns, cellWriter) {
             var cssClass = "col-xs-4", li;
             if (rowIndex % 3 === 0) { cssClass += ' first'; }
-            li = '<li class="' + cssClass + '"><div class="thumbnail"><div class="thumbnail-image">' + record.City + '</div><div class="caption">' + record.MapURL + '</div></div></li>';
+            li = '<li class="">' +
+                ' <div class="date"><span>' + record.Date + '</span><strong>' +  record.Date + '</strong><small>' +  record.Date + '</small></div>' +
+                ' <div class="tickets"><h4>' + record.Date + '</h4><p>' +  record.Date + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
+                '</li>';
             return li;
         }
 
+        /*
+         <div class="tickets">
+         <h4>Fleet Foxes</h4>
+         <p>Austin City Limits Live at The Moody Theater - Austin, TX</p>
+
+         <a href="" class="button">Tickets</a>
+         </div>
+*/
 
         $.getJSON('/ticketapi', function(data) {
-            console.log(data[0].City);
-            var dinos = data;
-
-        $('#ul-example').dynatable({
-            table: {
-                bodyRowSelector: 'li'
-            },
-            dataset: {
-                perPageDefault: 10,
-                perPageOptions: [10, 20, 30],
-                records: dinos
-            },
-            writers: {
-                _rowWriter: ulWriter
-            },
-            params: {
-                records: 'dinosaurs'
-            }
-        });
-
+            var events = data;
+                $('#ul-dynatable-events').dynatable({
+                    table: {
+                        bodyRowSelector: 'li'
+                    },
+                    dataset: {
+                        perPageDefault: 10,
+                        perPageOptions: [10, 20, 30],
+                        records: events
+                    },
+                    writers: {
+                        _rowWriter: ulWriter
+                    },
+                    params: {
+                        records: 'events'
+                    }
+                });
+             });
         });
 
     </script>
