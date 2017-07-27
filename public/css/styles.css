@@ -1,6 +1,5 @@
 @import url('global.css');
 
-
 /* Header */
 #header {
     padding: 10px 0;
@@ -199,6 +198,38 @@
     margin: -46px 40px 0 0;
 }
 
+/*Dynatable pagination fix*/
+
+#search #results #items #dynatable-pagination-links-ul-dynatable-events{
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+}
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li {
+	float: none;
+	clear: none;
+	padding: 0px;
+	margin-right: 4px;
+}
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li:nth-child(2n) {
+	background: transparent;
+}
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li  a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	display: inline-block;
+	border: 1px solid #d5d5d5;
+}
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li .dynatable-active-page{
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	background: #3db0c9;
+}
+#search #results #items #dynatable-record-count-ul-dynatable-events{
+	display:none;
+}
+/*End fix*/
 
 #search #results #page #pagination {
 	float: left;
