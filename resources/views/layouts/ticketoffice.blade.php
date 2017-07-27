@@ -6,7 +6,6 @@
 
     <!-- Meta -->
     <meta http-equiv="Content-Type" charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- Links -->
@@ -32,7 +31,9 @@
             document.getElementById('filters').style.display = 'none';
         }
 
+
         $( document ).ready(function() {
+
 
             $.getJSON('/ticketapi', function(data) {
                 console.log(data);
@@ -45,10 +46,17 @@
 
         function ulWriter(rowIndex, record, columns, cellWriter) {
             var cssClass = "col-xs-4", li;
+            var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var fulldate = new Date(Date.parse(record.DisplayDate));
+            var hour = fulldate.toLocaleString('en-US', { hour: 'numeric',minute:'numeric', hour12: true });
+            var monthName = monthNames[fulldate.getMonth()];
+            var day = fulldate.getDate();
+            var dayName = dayNames [fulldate.getDay()];
             if (rowIndex % 3 === 0) { cssClass += ' first'; }
             li = '<li class="">' +
-                ' <div class="date"><span>' + record.DisplayDate + '</span><strong>' +  record.DisplayDate + '</strong><small>' +  record.DisplayDate + '</small></div>' +
-                ' <div class="tickets"><h4>' + record.City + '</h4><p>' +  record.Venue + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
+                ' <div class="date"><span>' + dayName  + '</span><strong>' +  monthName + ' ' + day + '</strong><small>' +  hour + '</small></div>' +
+                ' <div class="tickets"><h4>' + record.Name + '</h4><p>' +  record.Venue + ' , ' + record.StateProvince + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
                 '</li>';
             return li;
         }
