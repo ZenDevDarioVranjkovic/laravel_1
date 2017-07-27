@@ -68,6 +68,7 @@
                         </div>
                     </div>
 
+<!--
                     <div id="items" class="clear">
 
                         <ul class="clear">
@@ -156,7 +157,7 @@
                             </li>
                         </ul>
                     </div>
-
+-->
 
                     <nav id="page" class="clear">
                         <div id="pagination">

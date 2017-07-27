@@ -34,11 +34,11 @@
 
         $( document ).ready(function() {
 
-
+/*
             $.getJSON('/ticketapi', function(data) {
                 console.log(data);
             });
-
+*/
             //Function get day
 
 
@@ -86,6 +86,9 @@
                     },
                     params: {
                         records: 'events'
+                    },
+                    inputs: {
+                        perPagePlacement: 'after'
                     }
                 });
              });
