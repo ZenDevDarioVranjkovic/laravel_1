@@ -81,6 +81,10 @@ Route::get('events', function () {
     return view('ticketoffice.index');
 })->name('ticketoffice.index');
 
+Route::get('search-events', function () {
+    return view('ticketoffice.searchevents');
+})->name('ticketoffice.searchevents');
+
 Auth::routes();
 
 Route::post('login',[
