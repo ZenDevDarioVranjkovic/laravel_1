@@ -15,14 +15,14 @@ class TicketApiController extends Controller
     {
         $ticketapi = new Ticketapi();
         $todayDate = date("Y.m.d");
-        $result = $ticketapi->getEvents2(array ('beginDate' => $todayDate));
-        return view('ticketapi.index',['result' => $result]);
+        $result = $ticketapi->getEvents(array ('beginDate' => $todayDate));
+        return $result;
     }
-    public function SearchEvents($searchTerms)
+    public function getSearchEvents()
     {
         $ticketapi = new Ticketapi();
-        $searchTerm = $searchTerms;
-        $result = $ticketapi->SearchEvents(array ('searchTerms' => $searchTerms));
+        $searchTerms = 'Test';
+        $result = $ticketapi->searchEvents(array ('searchTerms' => $searchTerms));
         return view('ticketapi.index',['result' => $result]);
     }
 

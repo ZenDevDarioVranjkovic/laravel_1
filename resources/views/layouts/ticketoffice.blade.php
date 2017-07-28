@@ -34,11 +34,12 @@
 
         $( document ).ready(function() {
 
-            /*
-            $.getJSON('/ticketapi/search-events/' + 'test', function(data) {
+/*
+            $.getJSON('/ticketapi', function(data) {
                 console.log(data);
             });
 */
+
             //Function get day
 
 
@@ -89,7 +90,7 @@
                     });
                  });
         };
-        getapi('/ticketapi/search-events/Wicked');
+        getapi('/ticketapi');
         });
 
     </script>

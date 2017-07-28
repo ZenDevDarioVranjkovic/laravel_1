@@ -108,6 +108,7 @@ class Ticketapi
     }
     */
 
+   /*
     function getEvents2($param)
     {
         $param['websiteConfigID'] = WEB_CONF_ID;
@@ -125,6 +126,7 @@ class Ticketapi
         //echo '  "totalRecordCount": 304';
        // echo '}';
     }
+   */
 
     function searchEvents($param)
     {
@@ -143,7 +145,6 @@ class Ticketapi
         //echo '  "totalRecordCount": 304';
         // echo '}';
     }
-
 
 
 
@@ -207,16 +208,12 @@ class Ticketapi
                 */
 
                 $returnString = '';
-                if(isset($result->GetEventsStringInputsResult)) {
-                    if(is_array($result->GetEventsStringInputsResult->Event)) {
-                        for($i = 0; $i < count($result->GetEventsStringInputsResult->Event); $i++) {
-                            $returnString .= '<div class="resultsSection">';
-                            $returnString .= resultsTable($result->GetEventsStringInputsResult->Event[$i]);
-                            $returnString .= '</div>';
-                        }
+                if(isset($result->GetEventsResult)) {
+                    if(is_array($result->GetEventsResult->Event)) {
+                        $returnString = json_encode($result->GetEventsResult->Event);
                     } else {
                         $returnString .= '<div class="resultsSection">';
-                        $returnString .= resultsTable($result->GetEventsStringInputsResult->Event);
+                        $returnString .= $result->GetEventsResult->Event;
                         $returnString .= '</div>';
                     }
                 }
@@ -237,5 +234,6 @@ class Ticketapi
         }
 
     }
+
 
 }
