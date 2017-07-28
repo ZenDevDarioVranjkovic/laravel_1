@@ -67,7 +67,7 @@ Route::get('ticketapi', [
     'uses' => 'TicketApiController@getApi',
     'as' => 'ticketapi.index'
 ]);
-Route::get('ticketapi/search-events', [
+Route::get('ticketapi/search-events/{searchTerms}', [
     'uses' => 'TicketApiController@SearchEvents',
     'as' => 'ticketapi.searchevents'
 ]);

@@ -34,11 +34,11 @@
 
         $( document ).ready(function() {
 
-
-            $.getJSON('/ticketapi/search-events', function(data) {
+            /*
+            $.getJSON('/ticketapi/search-events/' + 'test', function(data) {
                 console.log(data);
             });
-
+*/
             //Function get day
 
 
@@ -61,14 +61,6 @@
             return li;
         }
 
-        /*
-         <div class="tickets">
-         <h4>Fleet Foxes</h4>
-         <p>Austin City Limits Live at The Moody Theater - Austin, TX</p>
-
-         <a href="" class="button">Tickets</a>
-         </div>
-*/
         function getapi(url){
             $.getJSON(url, function(data) {
                 var events = data;
@@ -97,8 +89,7 @@
                     });
                  });
         };
-        getapi('/ticketapi');
-
+        getapi('/ticketapi/search-events/Wicked');
         });
 
     </script>
