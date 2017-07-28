@@ -67,6 +67,10 @@ Route::get('ticketapi', [
     'uses' => 'TicketApiController@getApi',
     'as' => 'ticketapi.index'
 ]);
+Route::get('ticketapi/search-events', [
+    'uses' => 'TicketApiController@SearchEvents',
+    'as' => 'ticketapi.searchevents'
+]);
 
 Route::get('tickets', function () {
     return view('ticketoffice.tickets');

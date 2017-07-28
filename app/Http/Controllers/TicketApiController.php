@@ -18,4 +18,12 @@ class TicketApiController extends Controller
         $result = $ticketapi->getEvents2(array ('beginDate' => $todayDate));
         return view('ticketapi.index',['result' => $result]);
     }
+    public function SearchEvents()
+    {
+        $ticketapi = new Ticketapi();
+        $searchTerms = 'Test';
+        $result = $ticketapi->SearchEvents(array ('searchTerms' => $searchTerms));
+        return view('ticketapi.index',['result' => $result]);
+    }
+
 }

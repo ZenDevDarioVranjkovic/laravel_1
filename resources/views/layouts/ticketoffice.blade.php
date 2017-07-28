@@ -69,33 +69,36 @@
          <a href="" class="button">Tickets</a>
          </div>
 */
+        function getapi(url){
+            $.getJSON(url, function(data) {
+                var events = data;
+                    $('#ul-dynatable-events').dynatable({
+                        table: {
+                            bodyRowSelector: 'li'
+                        },
+                        dataset: {
+                            perPageDefault: 10,
+                            perPageOptions: [10, 20, 30],
+                            records: events
+                        },
+                        writers: {
+                            _rowWriter: ulWriter
+                        },
+                        params: {
+                            records: 'events'
+                        },
+                        features: {
+                            search: false
+                        },
+                        inputs: {
+                            perPagePlacement: 'after',
+                            perPageText: 'Show ',
+                        }
+                    });
+                 });
+        };
+        getapi('/ticketapi');
 
-        $.getJSON('/ticketapi', function(data) {
-            var events = data;
-                $('#ul-dynatable-events').dynatable({
-                    table: {
-                        bodyRowSelector: 'li'
-                    },
-                    dataset: {
-                        perPageDefault: 10,
-                        perPageOptions: [10, 20, 30],
-                        records: events
-                    },
-                    writers: {
-                        _rowWriter: ulWriter
-                    },
-                    params: {
-                        records: 'events'
-                    },
-                    features: {
-                        search: false
-                    },
-                    inputs: {
-                        perPagePlacement: 'after',
-                        perPageText: 'Show ',
-                    }
-                });
-             });
         });
 
     </script>

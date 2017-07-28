@@ -126,6 +126,27 @@ class Ticketapi
        // echo '}';
     }
 
+    function searchEvents($param)
+    {
+        $param['websiteConfigID'] = WEB_CONF_ID;
+        $client = new SoapClient(WSDL);
+        $result = $client->__soapCall('SearchEvents', array('parameters' => $param));
+
+        $result = $result;
+        //$json = json_encode( (array)$result );
+
+        //echo '{';
+        //echo ' "records": ';
+        echo json_encode($result);
+        //echo ' , ';
+        //echo '  "queryRecordCount": 304,';
+        //echo '  "totalRecordCount": 304';
+        // echo '}';
+    }
+
+
+
+
     function getEvents($param) {
         $param['websiteConfigID'] = WEB_CONF_ID;
 
