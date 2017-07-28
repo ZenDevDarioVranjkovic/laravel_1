@@ -221,6 +221,12 @@
 	display: inline-block;
 	border: 1px solid #d5d5d5;
 }
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li:first-child span{
+	display: none;
+}
+#search #results #items #dynatable-pagination-links-ul-dynatable-events li.dynatable-disabled-page{
+	display: none;
+}
 #search #results #items #dynatable-pagination-links-ul-dynatable-events li .dynatable-active-page{
 	border: 0;
 	color: #fff;
@@ -229,6 +235,18 @@
 }
 #search #results #items #dynatable-record-count-ul-dynatable-events{
 	display:none;
+}
+.dynatable-per-page {
+	float: right;
+	position: relative;
+	top: -25px;
+}
+.dynatable-per-page .dynatable-per-page-select {
+	margin: 0px 10px;
+	padding: 5px 2px;
+}
+.dynatable-per-page::after {
+	content: " Events";
 }
 /*End fix*/
 

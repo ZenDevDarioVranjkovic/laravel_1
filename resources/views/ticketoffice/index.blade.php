@@ -157,7 +157,7 @@
                             </li>
                         </ul>
                     </div>
--->
+
 
                     <nav id="page" class="clear">
                         <div id="pagination">
@@ -177,6 +177,8 @@
                             <span>Events</span>
                         </div>
                     </nav>
+                    -->
+                    
                 </div>
 
                 <div id="sidebar">

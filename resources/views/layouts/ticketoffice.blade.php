@@ -87,8 +87,12 @@
                     params: {
                         records: 'events'
                     },
+                    features: {
+                        search: false
+                    },
                     inputs: {
-                        perPagePlacement: 'after'
+                        perPagePlacement: 'after',
+                        perPageText: 'Show ',
                     }
                 });
              });
