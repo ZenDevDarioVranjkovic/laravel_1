@@ -101,52 +101,6 @@ DEFINE('ECHL_GRANDCHILD', 41);
 
 class Ticketapi
 {
-    /*
-    public function  getTest(){
-        $test = 1234;
-        return $test;
-    }
-    */
-
-   /*
-    function getEvents2($param)
-    {
-        $param['websiteConfigID'] = WEB_CONF_ID;
-        $client = new SoapClient(WSDL);
-        $result = $client->__soapCall('GetEvents', array('parameters' => $param));
-
-        $result = $result->GetEventsResult->Event;
-        //$json = json_encode( (array)$result );
-
-        //echo '{';
-        //echo ' "records": ';
-        echo json_encode($result);
-        //echo ' , ';
-        //echo '  "queryRecordCount": 304,';
-        //echo '  "totalRecordCount": 304';
-       // echo '}';
-    }
-   */
-
-    function searchEvents($param)
-    {
-        $param['websiteConfigID'] = WEB_CONF_ID;
-        $client = new SoapClient(WSDL);
-        $result = $client->__soapCall('SearchEvents', array('parameters' => $param));
-
-        $result = $result->SearchEventsResult->Event;
-        //$json = json_encode( (array)$result );
-
-        //echo '{';
-        //echo ' "records": ';
-        echo json_encode($result);
-        //echo ' , ';
-        //echo '  "queryRecordCount": 304,';
-        //echo '  "totalRecordCount": 304';
-        // echo '}';
-    }
-
-
 
     function getEvents($param) {
         $param['websiteConfigID'] = WEB_CONF_ID;
@@ -160,7 +114,6 @@ class Ticketapi
                 break;
             }
         }
-
         if($parametersExist) {
             $client = new SoapClient(WSDL);
 
@@ -176,37 +129,6 @@ class Ticketapi
             unset($client);
             if (empty($result)) return "empty result";
             else {
-                // print_r($result); //If you want an example array uncomment this and use event id 203518 for a single result
-
-                // event will have an array with a count of events if the result is multiple, else event will go directly to the one
-                //	result event
-
-                /*
-                Example events array:
-
-                $result['GetEventsStringInputsResult']['Event'] =>
-
-                Array ( [ID] => 664146 [Name] => Hannah Montana [Date] => 2008-01-03T19:00:00 [DisplayDate] => 01/03/2008 7:00PM [Venue] => Quicken Loans Arena (formerly Gund Arena) [City] => Cleveland [StateProvince] => OH [ParentCategoryID] => 2 [ChildCategoryID] => 62 [GrandchildCategoryID] => 25 [MapURL] => http://www.indux.com/map/gundArena_basketball.gif [VenueID] => 253 [StateProvinceID] => 36 [VenueConfigurationID] => 0 [Clicks] => 0 [IsWomensEvent] => false )
-
-                ID													Event ID
-                Name												Event Name
-                Date												Date Time
-                DisplayDate									Date Time but Formatted for easy copy and paste
-                Venue												Hartford Civic Center, Madison Square Garden etc.
-                City												New York, Cleveland, etc.
-                StateProvince								CT, VT, MA for example
-                ParentCategoryID						ID, useful for other ws calls
-                ChildCategoryID							ID, useful for other ws calls
-                GrandchildCategoryID				ID, useful for other ws calls
-                MapURL											Image location of the Map
-                VenueID											Venue ID, for use in other ws calls
-                StateProvinceID							State Province ID, for use in other ws calls
-                VenueConfigurationID				Each Venue has "n" configurations, stage, arena, etc.
-                Clicks											Deprecated
-                IsWomensEvent								really useful for college basketball teams for example, where theres a mens and a womens
-
-                */
-
                 $returnString = '';
                 if(isset($result->GetEventsResult)) {
                     if(is_array($result->GetEventsResult->Event)) {
@@ -222,17 +144,60 @@ class Ticketapi
                     $returnString .= 'There were no matches';
                     $returnString .= '</div>';
                 }
-
                 return $returnString;
-
             }
-
         } else { // no parameters
 
             return 'Please specify some search terms.';
 
         }
 
+    }
+
+    function searchEvents($keyWordParams) {
+
+        $resultString = '';
+        $keyWordParams['websiteConfigID'] = WEB_CONF_ID;
+
+        if($keyWordParams['searchTerms'])
+        {
+            $client = new SoapClient(WSDL);
+
+            $result = $client->__soapCall('SearchEvents', array('parameters' => $keyWordParams));
+
+            if (is_soap_fault($result))
+            {
+                echo '<h2>Fault</h2><pre>';
+                print_r($result);
+                echo '</pre>';
+            }
+
+            unset($client);
+            if (empty($result)) return "No results match the specified terms";
+            else {
+
+                $returnString = '';
+
+                if(isset($result->SearchEventsResult->Event))
+                {
+
+                    if(is_array($result->SearchEventsResult->Event)) {
+                        $returnString = json_encode($result->SearchEventsResult->Event);
+                    } else {
+                        $returnString .= '<div class="resultsSection">';
+                        $returnString .= resultsTable($result->SearchEventsResult->Event);
+                        $returnString .= '</div>';
+                    }
+                }
+                else
+                {
+                    $returnString .= '<div class="resultsSection">';
+                    $returnString .= 'There were no matches';
+                    $returnString .= '</div>';
+                }
+                return $returnString;
+            }
+        }
     }
 
 

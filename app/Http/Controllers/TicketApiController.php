@@ -11,19 +11,18 @@ class TicketApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getApi()
+    public function getEvents()
     {
         $ticketapi = new Ticketapi();
         $todayDate = date("Y.m.d");
         $result = $ticketapi->getEvents(array ('beginDate' => $todayDate));
         return $result;
     }
-    public function getSearchEvents()
+    public function searchEvents($searchTerms)
     {
         $ticketapi = new Ticketapi();
-        $searchTerms = 'Test';
         $result = $ticketapi->searchEvents(array ('searchTerms' => $searchTerms));
-        return view('ticketapi.index',['result' => $result]);
+        return $result;
     }
 
 }

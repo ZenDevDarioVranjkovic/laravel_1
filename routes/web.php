@@ -64,11 +64,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
 });
 
 Route::get('ticketapi', [
-    'uses' => 'TicketApiController@getApi',
+    'uses' => 'TicketApiController@getEvents',
     'as' => 'ticketapi.index'
 ]);
 Route::get('ticketapi/search-events/{searchTerms}', [
-    'uses' => 'TicketApiController@SearchEvents',
+    'uses' => 'TicketApiController@searchEvents',
     'as' => 'ticketapi.searchevents'
 ]);
 
