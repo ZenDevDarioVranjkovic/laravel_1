@@ -132,7 +132,7 @@ class Ticketapi
         $client = new SoapClient(WSDL);
         $result = $client->__soapCall('SearchEvents', array('parameters' => $param));
 
-        $result = $result;
+        $result = $result->SearchEventsResult->Event;
         //$json = json_encode( (array)$result );
 
         //echo '{';

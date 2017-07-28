@@ -34,11 +34,11 @@
 
         $( document ).ready(function() {
 
-/*
-            $.getJSON('/ticketapi', function(data) {
+
+            $.getJSON('/ticketapi/search-events', function(data) {
                 console.log(data);
             });
-*/
+
             //Function get day
 
 
