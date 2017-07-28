@@ -5,7 +5,7 @@
 
             <a href="" id="logo">Ticket<span>Office</span></a>
 
-            <form method="POST" action="">
+            <form method="GET" action="/search-events">
                 <span class="fa fa-search"></span>
                 <input type="text" name="search" placeholder="Search by team, artist or event">
             </form>
