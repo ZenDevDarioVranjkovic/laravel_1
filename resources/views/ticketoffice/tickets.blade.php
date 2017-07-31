@@ -11,6 +11,56 @@
         </section>
 
         <section class="row-2">
+
+            <!-- Begin main enclosing table -->
+            <table border="0" cellspacing="0" cellpadding="0" width="1000px">
+                <tr>
+                    <td>
+                        <p align="center">Sample Seatics Venue Maps "Default" Ticket List page -- Build 0103.0.0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:1000px">
+                        <div id="ssc_listAndMapDiv"></div>
+                    </td>
+                </tr>
+
+                <!-- The following message, combo box and button provide a way to try different map/list options easily without any coding. This MUST NOT BE INCLUDED IN ANY REAL WEB PAGES -->
+                <tr>
+                    <td align="center"> Select an item from the list and click the "Send" button to try out different map options</td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <input type="button" value="Send List this Option ==>" onclick="eval($('#listActions').val())" />
+                        <select size="1" id="listActions">
+                            <option value="alert('actionHistory='+ssc.actionHistory);" selected="selected">Display Action History</option>
+                            <option value="ssc.setOptions({showTGsNotOnMap:'merged'})">TGs not on map: MERGED IN LIST</option>
+                            <option value="ssc.setOptions({showTGsNotOnMap:'bottom'})">TGs not on map: AT BOTTOM OF LIST</option>
+                            <option value="ssc.setOptions({showTGsNotOnMap:'hidden'})">TGs not on map: HIDDEN</option>
+                            <option value="ssc.setOptions({showTGsInNotSelectedSections:true})">TGs in UN-selected sections on map: SHOW</option>
+                            <option value="ssc.setOptions({showTGsInNotSelectedSections:false})">TGs in UN-selected sections on map:HIDE</option>
+                            <option value="ssc.setOptions({showListGroupHeaders:true})">Top list content descriptor: SHOW</option>
+                            <option value="ssc.setOptions({showListGroupHeaders:false})">Top list content descriptor: HIDE</option>
+                            <option value="ssc.setOptions({showDynamicMap:1})">Show Dynamic Map</option>
+                            <option value="ssc.setOptions({showDynamicMap:0})">Show Static Map</option>
+                            <option value="ssc.setOptions({showStdSectionNames:false})">Standard Section names: Disable</option>  <option value="ssc.setOptions({showStdSectionNames:true})">Standard Section names: Enable</option> <option value="ssc.setOptions({addlListFilters:[]})">Addl List Filters: []</option>
+                            <option value="ssc.setOptions({addlListFilters:['parking']})">Addl List Filters: [parking]</option>
+                            <option value="ssc.setOptions({addlListFilters:['packages']})">Addl List Filters: [packages]</option>
+                            <option value="ssc.setOptions({addlListFilters:['parking', 'packages']})">Addl List Filters: [parking,packages]</option>
+                            <option value="ssc.setOptions({showNotesAs:'turndown'})">showNotesAs: Turndown - default</option>
+                            <option value="ssc.setOptions({showNotesAs:'text'})">showNotesAs: Text in Ticket Group</option>
+                            <option value="ssc.setOptions({vfsEnable:'hold'})">VFS Enable: Hold</option>
+                            <option value="ssc.setOptions({vfsEnable:'click'})">VFS Enable: Click</option>
+                            <option value="ssc.setOptions({vfsEnable:0})">VFS Disable</option>
+                            <option value="ssc.setOptions({sectionNotInListColor:'AAFFAA'})">sectionNotInList Color=LtGreen</option>
+                            <option value="ssc.setOptions({sectionNotInListColor:'FFFFFF'})">sectionNotInList Color=White</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <!--
             <form method="POST" action="">
                 <fieldset id="filter">
                     <h5>Filter</h5>
@@ -358,6 +408,8 @@
                     </ul>
                 </fieldset>
             </form>
+
+                    -->
         </section>
     </main>
     <!-- End Main Content -->
