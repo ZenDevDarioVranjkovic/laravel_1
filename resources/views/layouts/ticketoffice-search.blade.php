@@ -95,12 +95,13 @@
                 var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
                 return results[1] || 0;
             }
-            var test = $.urlParam('search');
-            if(test == ''){
+
+            var test = $.urlParam('search');console.log(test);
+            if( ! '{{ (request()->has('search')) }}' ){
                 getapi('/ticketapi/');
             }
             else{
-                getapi('/ticketapi/search-events/'+test);
+                getapi('/ticketapi/search-events/' + '{{ (request()->has('search') &&  strlen(request()->input('search') > 0)) ?  '' : request()->input('search')  }}');
             }
         });
 
