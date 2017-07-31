@@ -14,7 +14,7 @@
                 <div id="results">
 
                     <header class="clear">
-                        <div id="number">32 Events</div>
+                        <div id="number"></div>
 
                         <div id="location"><strong><i class="fa fa-map-marker"></i>Location:</strong> <strong>Austin (TX)</strong> <small id="change">Change Location</small></div>
 

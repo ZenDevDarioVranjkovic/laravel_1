@@ -65,6 +65,7 @@
         function getapi(url){
             $.getJSON(url, function(data) {
                 var events = data;
+                $("#number").html(Object.keys(data).length + ' Events');
                     $('#ul-dynatable-events').dynatable({
                         table: {
                             bodyRowSelector: 'li'
