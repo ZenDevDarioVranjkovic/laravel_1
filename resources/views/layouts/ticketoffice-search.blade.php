@@ -96,7 +96,12 @@
                 return results[1] || 0;
             }
             var test = $.urlParam('search');
-            getapi('/ticketapi/search-events/'+test);
+            if(test == ''){
+                getapi('/ticketapi/');
+            }
+            else{
+                getapi('/ticketapi/search-events/'+test);
+            }
         });
 
     </script>
