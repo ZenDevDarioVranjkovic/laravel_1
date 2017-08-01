@@ -26,8 +26,8 @@
 
             <div id="securty" class="block">
                 <figure>
-                    <img src="images/truste.png">
-                    <img src="images/norton.png">
+                    <img src="/images/truste.png">
+                    <img src="/images/norton.png">
                 </figure>
                 <p class="copy">&copy; 2017 TicketOffice - All Rights Reserved.</p>
             </div>

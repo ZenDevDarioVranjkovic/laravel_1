@@ -72,7 +72,7 @@ Route::get('ticketapi/search-events/{searchTerms}', [
     'as' => 'ticketapi.searchevents'
 ]);
 
-Route::get('tickets', function () {
+Route::get('tickets/{id}', function () {
     return view('ticketoffice.tickets');
 })->name('ticketoffice.tickets');
 

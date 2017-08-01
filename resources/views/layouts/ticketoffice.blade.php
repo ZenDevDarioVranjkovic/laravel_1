@@ -57,7 +57,7 @@
             if (rowIndex % 3 === 0) { cssClass += ' first'; }
             li = '<li class="">' +
                 ' <div class="date"><span>' + dayName  + '</span><strong>' +  monthName + ' ' + day + '</strong><small>' +  hour + '</small></div>' +
-                ' <div class="tickets"><h4>' + record.Name + '</h4><p>' +  record.Venue + ' , ' + record.StateProvince + '</p><a href="" class="button">' +  'Tickets' + '</a></div>' +
+                ' <div class="tickets"><h4>' + record.Name + '</h4><p>' +  record.Venue + ' , ' + record.StateProvince + '</p><a href="/tickets/' + record.ID + '" class="button">' +  'Tickets' + '</a></div>' +
                 '</li>';
             return li;
         }

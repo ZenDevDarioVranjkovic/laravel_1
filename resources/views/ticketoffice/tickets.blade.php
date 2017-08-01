@@ -13,9 +13,14 @@
         <section class="row-2">
 
             <div style="height: 90vh; width: 100%">
+                <script>
+                    var href = location.href;
+                    console.log(href.match(/([^\/]*)\/*$/)[1]);
+                    //2758221
+                </script>
                 <script src="http://mapwidget2-beta.seatics.com/mobile/js?eventId=2758221&websiteConfigId=24124"></script>
                 <script>
-                    Seatics.config.buyButtonContentHtml = '<button style="height:20px; background-color:green; padding: 6px 12px; display: inline-block; border: 0px; color: #fff; background: #da4545; border-radius: 4px; line-height: 0;font-size: 14px;"class="venueticket-list-checkout-trigger-js">Buy</button>';
+                    Seatics.config.buyButtonContentHtml = '<button style="height:20px; padding: 6px 12px; display: inline-block; border: 0px; color: #fff; background: #da4545; border-radius: 4px; line-height: 0;font-size: 14px;"class="venueticket-list-checkout-trigger-js">Buy</button>';
                     Seatics.config.skipPrecheckout = true;
                 </script>
             </div>

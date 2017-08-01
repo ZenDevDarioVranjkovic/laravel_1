@@ -10,7 +10,7 @@
 
 
     <!-- Links -->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css">
 
     <!-- Script -->
     <script type="text/javascript"></script>
