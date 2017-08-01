@@ -38,17 +38,14 @@
             ssc.sortTgList('price', 'asc'); // sort the list (before it's displayed!) in order of increasing price
             // sample override buyTickets function to show info that is available  when user clicks "Buy"
             ssc.EH.buyTickets = function(buyObj) {
-                var t = "",
-                    coParms = "";
+                var t = "";
+                var coParms = "";
                 for (var x in buyObj) {
-                    t += String.fromCharCode(10) + x + ':' + buyObj[x]
+                    t += String.fromCharCode(10) + x + ':' + buyObj[x];
                 }
-                coParms = 'e=' + buyObj.tgSds +
-                    '&treq=' + buyObj.buyQty +
-                    '&wcid=' + "<websiteID>" + '&SessionId=' + '<session id>' +
-                    '&ah=' + buyObj.actionHistory
+                coParms = 'e=' + buyObj.tgSds + '&treq=' + buyObj.buyQty + '&wcid=' + "<websiteID>" + '&SessionId=' + '<session id>' + '&ah=' + buyObj.actionHistory;
                 if (buyObj.mid) {
-                    coParms += '&mid=' + buyObj.mid
+                    coParms += '&mid=' + buyObj.mid;
                 }
                 alert("This replaces checkout  for this demo page. Buy Object properties:" + t + String.fromCharCode(10) + 'Partial Checkout string:' + coParms)
             }
