@@ -15,10 +15,13 @@
             <div style="height: 90vh; width: 100%">
                 <script>
                     var href = location.href;
-                    console.log(href.match(/([^\/]*)\/*$/)[1]);
+                    var tickethref = href.match(/([^\/]*)\/*$/)[1];
+                    var websiteConfigId=24124;
                     //2758221
+                    document.write('<script language="javascript" src="http://mapwidget2-beta.seatics.com/mobile/js?eventId='+tickethref+'&websiteConfigId='+websiteConfigId+'" ></' + 'script>');
                 </script>
-                <script src="http://mapwidget2-beta.seatics.com/mobile/js?eventId=2758221&websiteConfigId=24124"></script>
+
+
                 <script>
                     Seatics.config.buyButtonContentHtml = '<button style="height:20px; padding: 6px 12px; display: inline-block; border: 0px; color: #fff; background: #da4545; border-radius: 4px; line-height: 0;font-size: 14px;"class="venueticket-list-checkout-trigger-js">Buy</button>';
                     Seatics.config.skipPrecheckout = true;
