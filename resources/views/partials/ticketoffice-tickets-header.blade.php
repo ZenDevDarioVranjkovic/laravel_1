@@ -14,7 +14,7 @@
     <ul id="menu" class="right">
         <li><a href="{{ route('ticketoffice.sport') }}">Sports</a></li>
         <li><a href="{{ route('ticketoffice.concert') }}">Concerts</a></li>
-        <li><a href="">Theater</a></li>
+        <li><a href="{{ route('ticketoffice.theater') }}">Theater</a></li>
     </ul>
 </header>
 <!-- End Header -->
