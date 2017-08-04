@@ -86,6 +86,15 @@ Route::get('events/sport', function () {
     return view('ticketoffice.sport');
 })->name('ticketoffice.sport');
 
+Route::get('ticketapi/concert', [
+    'uses' => 'TicketApiController@concertEvents',
+    'as' => 'ticketapi.concertevents'
+]);
+
+Route::get('events/concert', function () {
+    return view('ticketoffice.concert');
+})->name('ticketoffice.concert');
+
 
 Route::get('events', function () {
     return view('ticketoffice.index');

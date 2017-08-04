@@ -1,4 +1,4 @@
-@extends('layouts.ticketoffice-sport')
+@extends('layouts.ticketoffice-concert')
 
 @section('content')
 
