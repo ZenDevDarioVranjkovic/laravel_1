@@ -12,7 +12,7 @@
     </div>
 
     <ul id="menu" class="right">
-        <li><a href="">Sports</a></li>
+        <li><a href="{{ route('ticketoffice.sport') }}">Sports</a></li>
         <li><a href="">Concerts</a></li>
         <li><a href="">Theater</a></li>
     </ul>
