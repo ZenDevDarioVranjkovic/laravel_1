@@ -95,6 +95,15 @@ Route::get('events/concert', function () {
     return view('ticketoffice.concert');
 })->name('ticketoffice.concert');
 
+Route::get('ticketapi/theater', [
+    'uses' => 'TicketApiController@theaterEvents',
+    'as' => 'ticketapi.theaterevents'
+]);
+
+Route::get('events/theater', function () {
+    return view('ticketoffice.theater');
+})->name('ticketoffice.theater');
+
 
 Route::get('events', function () {
     return view('ticketoffice.index');
