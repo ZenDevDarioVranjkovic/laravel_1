@@ -40,12 +40,4 @@ class TicketApiController extends Controller
         return $result;
     }
 
-    public function theaterEvents()
-    {
-        $ticketapi = new Ticketapi();
-        $todayDate = date("Y.m.d");
-        $result = $ticketapi->getEvents(array ('parentCategoryID' => 3));
-        return $result;
-    }
-
 }
