@@ -32,6 +32,17 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+        if($this->shouldReport($exception)){
+
+            $data = array('name'=>'Poslani podatak');
+
+            Mail::send('emails.welcome', $data, function($message) {
+                $message->to('dario@zendev.se', 'Dario')->subject
+                ('Testing Mail');
+                $message->from('dario@zendev.se','Dario Vranjkovic');
+            });
+        }
+
         parent::report($exception);
     }
 

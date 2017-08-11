@@ -9,6 +9,8 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Gate;
+use Illuminate\Support\Facades\Mail;
+
 class PostController extends Controller
 {
     public function getIndex()
@@ -75,6 +77,14 @@ class PostController extends Controller
         ]);
         $user->posts()->save($post);
         $post->tags()->attach($request->input('tags') === null ? [] : $request->input('tags'));
+
+        $data = array('name'=>'Poslani podatak');
+
+        Mail::send('emails.welcome', $data, function($message) {
+            $message->to('dario@zendev.se', 'Dario')->subject
+            ('Testing Mail');
+            $message->from('dario@zendev.se','Dario Vranjkovic');
+        });
 
         return redirect()->route('admin.index')->with('info', 'Post created, Title is: ' . $request->input('title'));
     }
